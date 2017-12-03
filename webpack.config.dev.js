@@ -20,19 +20,28 @@ module.exports = function(env) {
         module:{
           rules: [
             {
-              test: /\.js$/,
+              test:  [/\.js$/, /\.jsx$/, /\.es6$/],
               use: [{
                 loader: "babel-loader",
+                options: {
+                    cacheDirectory: true,          
+                }
               }]  
-            }           
+            },
+            {
+              test: /\.css$/,
+              use: [
+                "style-loader",
+                "css-loader"
+              ]  
+            }              
           ],
         },
         devServer: {
           port: 7777,
-          host: 'localhost',
+          host: '0.0.0.0',
           historyApiFallback: true,
           noInfo: false,
-          // stats: 'minimal'
         },
         plugins: [
           new HtmlWebpackPlugin({

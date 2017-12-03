@@ -135,26 +135,31 @@
 
 // console.log([NaN].includes(NaN))
 
-console.log(0 in [undefined, undefined, undefined]) // true
-console.log(0 in [, , ,]) // false
+// console.log(0 in [undefined, undefined, undefined]) // true
+// console.log(0 in [, , ,]) // false
 
-// forEach方法
-[,'a'].forEach((x,i) => console.log(i)); // 1
+// // forEach方法
+// [,'a'].forEach((x,i) => console.log(i)); // 1
 
-// filter方法
-['a',,'b'].filter(x => true) // ['a','b']
+// // filter方法
+// ['a',,'b'].filter(x => true) // ['a','b']
 
-// every方法
-[,'a'].every(x => x==='a') // true
+// // every方法
+// [,'a'].every(x => x==='a') // true
 
-// some方法
-[,'a'].some(x => x !== 'a') // false
+// // some方法
+// [,'a'].some(x => x !== 'a') // false
 
-// map方法
-[,'a'].map(x => 1) // [,1]
+// // map方法
+// [,'a'].map(x => 1) // [,1]
 
-// join方法
-[,'a',undefined,null].join('#') // "#a##"
+// // join方法
+// [,'a',undefined,null].join('#') // "#a##"
 
-// toString方法
-[,'a',undefined,null].toString() // ",a,,"
+// // toString方法
+// [,'a',undefined,null].toString() // ",a,,"
+
+// var a1 = [1, 2, 3, 4]
+
+// var a2 = [for (i of a1) i * 2]
+// console.log(a2)

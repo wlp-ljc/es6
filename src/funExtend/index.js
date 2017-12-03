@@ -298,6 +298,14 @@
 // console.log(goArr)
 
 // 箭头函数
+/*
+	a => b => a+b
+	function(a) {
+		return function(b) {
+			return a + b
+		}
+	}
+*/
 // var f = v => v+2;
 // console.log(f(23))
 
